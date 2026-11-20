@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand/20 text-brand-dark;
+  }
+}
+
+@layer components {
+  .container-ugta {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/90 bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-brand-dark;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-brand px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand transition hover:bg-brand hover:text-white;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-accent;
+  }
+
+  .heading-display {
+    @apply font-display text-3xl font-semibold leading-tight text-ink md:text-4xl lg:text-5xl;
+  }
+}
